@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WMMITAN Startup Capabilities Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 { color: #003366; }
+    label { display: block; margin-top: 1rem; font-weight: bold; }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+    }
+    button {
+      background: #005599;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #003366;
+    }
+    .page { display: none; }
+    .page.active { display: block; }
+    .required::before { content: "* "; color: red; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form id="startupForm">
+      
+      <!-- Page 1: Startup Profile -->
+      <div class="page active">
+        <h2>1. Startup Profile</h2>
+
+        <label class="required">Legal Name</label>
+        <input type="text" name="legal_name" required maxlength="255" pattern="[A-Za-z0-9\s\-\.]+" title="Alphanumeric and common characters only" />
+
+        <label>Trading Name</label>
+        <input type="text" name="trading_name" maxlength="255" />
+
+        <label>Companies House Number</label>
+        <input type="text" name="company_number" pattern="\d{8}" maxlength="8" title="Enter an 8-digit UK company number" />
+
+        <label class="required">HQ Address</label>
+        <textarea name="hq_address" required></textarea>
+
+        <label class="required">Contact Person</label>
+        <input type="text" name="contact_person" required maxlength="255" />
+
+        <label class="required">Phone</label>
+        <input type="tel" name="phone" required maxlength="20" pattern="[\d\s\-\+]+" title="Valid phone number format" />
+
+        <label class="required">Email</label>
+        <input type="email" name="email" required maxlength="255" />
+
+        <label>Year Founded</label>
+        <input type="number" name="year_founded" min="2000" max="2025" />
+
+        <label>Team Size</label>
+        <input type="number" name="team_size" min="1" />
+
+        <label>Funding Status (GBP)</label>
+        <input type="number" step="0.01" name="funding_status" min="0" />
+
+        <label class="required">Funding Stage</label>
+        <select name="funding_stage" required>
+          <option value="">--Select--</option>
+          <option>Pre-seed</option>
+          <option>Seed</option>
+          <option>Series A</option>
+          <option>Series B</option>
+          <option>Other</option>
+        </select>
+
+        <label>D-U-N-S Number</label>
+        <input type="text" name="duns" maxlength="9" pattern="\d{9}" title="9-digit DUNS number" />
+
+        <div class="nav">
+          <span></span>
+          <button type="button" onclick="nextPage()">Next &raquo;</button>
+        </div>
+      </div>
+
+      <!-- Placeholder for future pages (2–12) -->
+      <div class="page">
+        <h2>Page 2 (Coming Soon)</h2>
+        <p>This page will contain fields for Technology & Innovation.</p>
+        <div class="nav">
+          <button type="button" onclick="prevPage()">&laquo; Back</button>
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const pages = document.querySelectorAll(".page");
+    let current = 0;
+
+    function showPage(index) {
+      pages.forEach((page, i) => {
+        page.classList.toggle("active", i === index);
+      });
+    }
+
+    function nextPage() {
+      if (current < pages.length - 1) {
+        current++;
+        showPage(current);
+      }
+    }
+
+    function prevPage() {
+      if (current > 0) {
+        current--;
+        showPage(current);
+      }
+    }
+
+    document.getElementById("startupForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Form submitted (demo only). Add backend integration here.");
+    });
+
+    // Show first page on load
+    showPage(current);
+  </script>
+</body>
+</html>
