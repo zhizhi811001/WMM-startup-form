@@ -105,6 +105,53 @@
           <button type="button" onclick="nextPage()">Next &raquo;</button>
         </div>
       </div>
+<!-- Page 2: Technology & Innovation -->
+<div class="page">
+  <h2>2. Technology & Innovation</h2>
+
+  <label class="required">Technology Description</label>
+  <textarea name="technology_description" maxlength="1000" required placeholder="Brief overview of your product or technology (max 1000 characters)"></textarea>
+
+  <label class="required">Primary Sector</label>
+  <select name="primary_sector" required>
+    <option value="">--Select--</option>
+    <option>Automotive</option>
+    <option>Aerospace</option>
+    <option>Clean Tech</option>
+    <option>Med-Tech</option>
+    <option>Rail</option>
+    <option>Defence</option>
+    <option>Other</option>
+  </select>
+
+  <label>Secondary Sectors</label>
+  <select name="secondary_sectors[]" multiple>
+    <option>Automotive</option>
+    <option>Aerospace</option>
+    <option>Clean Tech</option>
+    <option>Med-Tech</option>
+    <option>Rail</option>
+    <option>Defence</option>
+    <option>Other</option>
+  </select>
+
+  <label class="required">Technology Readiness Level (TRL)</label>
+  <input type="number" name="trl" required min="1" max="9" placeholder="1–9">
+
+  <label>Intellectual Property</label>
+  <textarea name="intellectual_property" placeholder="e.g., Patent #123456, filed 2023"></textarea>
+
+  <label>R&D Focus</label>
+  <textarea name="rd_focus" maxlength="500" placeholder="Current research or development priorities (max 500 characters)"></textarea>
+
+  <label>Key Differentiators</label>
+  <textarea name="key_differentiators" maxlength="500" placeholder="What makes your tech/business model unique? (max 500 characters)"></textarea>
+
+  <div class="nav">
+    <button type="button" onclick="prevPage()">&laquo; Back</button>
+    <button type="button" onclick="nextPage()">Next &raquo;</button>
+  </div>
+</div>
 
       <!-- Placeholder for future pages (2–12) -->
       <div class="page">
