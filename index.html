@@ -152,6 +152,423 @@
     <button type="button" onclick="nextPage()">Next &raquo;</button>
   </div>
 </div>
+<!-- Page 3: Manufacturing Needs -->
+<div class="page">
+  <h2>3. Manufacturing Needs</h2>
+
+  <!-- Required Processes -->
+  <label class="required">Required Processes</label>
+  <select name="required_processes[]" multiple required>
+    <option>CNC machining (mill)</option>
+    <option>CNC machining (turn)</option>
+    <option>CNC machining (5-axis)</option>
+    <option>Sheet-metal</option>
+    <option>Stamping</option>
+    <option>Injection moulding</option>
+    <option>Additive manufacturing</option>
+    <option>Composites lay-up</option>
+    <option>Casting</option>
+    <option>Heat treatment</option>
+    <option>Welding</option>
+    <option>Surface finishing</option>
+    <option>PCB assembly</option>
+    <option>Harnessing</option>
+    <option>Clean-room assembly</option>
+    <option>Other</option>
+  </select>
+  <textarea name="required_processes_details" placeholder="e.g., 5-axis CNC, ±0.002mm tolerance"></textarea>
+
+  <!-- Materials Needed -->
+  <label class="required">Materials Needed</label>
+  <select name="materials_needed[]" multiple required>
+    <option>Aluminum</option>
+    <option>Stainless Steel</option>
+    <option>Titanium</option>
+    <option>Composites</option>
+    <option>Thermoplastics</option>
+    <option>Thermosets</option>
+    <option>Copper Alloys</option>
+    <option>Other</option>
+  </select>
+  <textarea name="materials_needed_details" placeholder="e.g., CFRP, PEEK, 316L"></textarea>
+
+  <!-- Production Envelope -->
+  <label>Production Envelope (mm)</label>
+  <input type="number" step="0.01" name="production_x" placeholder="X">
+  <input type="number" step="0.01" name="production_y" placeholder="Y">
+  <input type="number" step="0.01" name="production_z" placeholder="Z">
+
+  <!-- Tolerances Required -->
+  <label>Tolerances Required</label>
+  <input type="number" step="0.0001" name="tolerances_required" placeholder="e.g., ±0.001">
+
+  <!-- Production Volume -->
+  <label>Estimated Monthly Production Volume (units)</label>
+  <input type="number" name="production_volume" min="0" placeholder="e.g., 1000">
+
+  <!-- Special Processes -->
+  <label>Special Processes</label>
+  <select name="special_processes[]" multiple>
+    <option>NDT</option>
+    <option>Chemical Processing</option>
+    <option>Thermal Spray</option>
+    <option>Anodizing</option>
+    <option>Other</option>
+  </select>
+  <textarea name="special_processes_details" placeholder="e.g., Fluorescent penetrant, Nadcap compliant"></textarea>
+
+  <!-- Prototyping Needs -->
+  <label>Prototyping Needs</label>
+  <textarea name="prototyping_needs" placeholder="e.g., Rapid prototyping, functional test fixtures, 3D printing"></textarea>
+
+  <div class="nav">
+    <button type="button" onclick="prevPage()">&laquo; Back</button>
+    <button type="button" onclick="nextPage()">Next &raquo;</button>
+  </div>
+</div>
+<!-- Page 4: Certifications & Standards -->
+<div class="page">
+  <h2>4. Certifications & Standards</h2>
+
+  <!-- Required Quality Certifications -->
+  <label>Required Quality Certifications</label>
+  <select name="required_certifications[]" multiple>
+    <option>ISO 9001</option>
+    <option>IATF 16949</option>
+    <option>AS9100</option>
+    <option>AS9110</option>
+    <option>AS9120</option>
+    <option>Other</option>
+  </select>
+  <input type="text" name="required_certifications_details" placeholder="Details, if any (e.g., valid until 2025)">
+
+  <!-- Nadcap Scopes Needed -->
+  <label>Nadcap Scopes Needed</label>
+  <select name="nadcap_scopes[]" multiple>
+    <option>HT (Heat Treating)</option>
+    <option>CP (Chemical Processing)</option>
+    <option>MTL (Materials Testing Laboratory)</option>
+    <option>Other</option>
+  </select>
+  <input type="text" name="nadcap_scopes_details" placeholder="Details, if any">
+
+  <!-- Other Standards -->
+  <label>Other Standards</label>
+  <textarea name="other_standards" placeholder="e.g., ISO 14001, REACH, RoHS compliance requirements"></textarea>
+
+  <!-- Compliance Needs -->
+  <label>Compliance Needs</label>
+  <textarea name="compliance_needs" placeholder="e.g., Automotive PPAP Level 3, Clean Room ISO 14644-1 Class 7"></textarea>
+
+  <div class="nav">
+    <button type="button" onclick="prevPage()">&laquo; Back</button>
+    <button type="button" onclick="nextPage()">Next &raquo;</button>
+  </div>
+</div>
+<!-- Page 5: Product Development Stage -->
+<div class="page">
+  <h2>5. Product Development Stage</h2>
+
+  <!-- Current Phase -->
+  <label class="required">Current APQP/AS9145 Phase</label>
+  <select name="development_phase" required>
+    <option value="">--Select--</option>
+    <option>Phase 1: Planning</option>
+    <option>Phase 2: Product Design</option>
+    <option>Phase 3: Process Design</option>
+    <option>Phase 4: Validation</option>
+    <option>Phase 5: Launch & CI</option>
+  </select>
+
+  <!-- Phase-Specific Needs -->
+  <label>Phase-Specific Needs</label>
+  <textarea name="phase_specific_needs" placeholder="e.g., DFMEA support for Phase 2, control plan templates"></textarea>
+
+  <!-- Design Tools Used -->
+  <label>Design Tools Used</label>
+  <select name="design_tools[]" multiple>
+    <option>SolidWorks</option>
+    <option>CATIA</option>
+    <option>AutoCAD</option>
+    <option>ANSYS</option>
+    <option>NX</option>
+    <option>Creo</option>
+    <option>Other</option>
+  </select>
+  <textarea name="design_tools_details" placeholder="e.g., SolidWorks 2023, CATIA V5 R2022"></textarea>
+
+  <!-- Testing Requirements -->
+  <label>Testing Requirements</label>
+  <textarea name="testing_requirements" placeholder="e.g., Environmental chamber test, functional testing for battery packs"></textarea>
+
+  <!-- Validation Needs -->
+  <label>Validation Needs</label>
+  <textarea name="validation_needs" placeholder="e.g., PPAP Level 3, Cpk>1.33 for safety-critical parts"></textarea>
+
+  <div class="nav">
+    <button type="button" onclick="prevPage()">&laquo; Back</button>
+    <button type="button" onclick="nextPage()">Next &raquo;</button>
+  </div>
+</div>
+<!-- Page 6: Digital & Industry 4.0 Needs -->
+<div class="page">
+  <h2>6. Digital & Industry 4.0 Needs</h2>
+
+  <!-- CAD/CAM/PLM Needs -->
+  <label>CAD/CAM/PLM Integration Needed?</label>
+  <div>
+    <label><input type="radio" name="cad_plm" value="Yes"> Yes</label>
+    <label><input type="radio" name="cad_plm" value="No"> No</label>
+  </div>
+  <textarea name="cad_plm_details" placeholder="e.g., CATIA V5 compatibility, Siemens Teamcenter integration"></textarea>
+
+  <!-- IoT Requirements -->
+  <label>IoT Requirements</label>
+  <div>
+    <label><input type="radio" name="iot_needs" value="Yes"> Yes</label>
+    <label><input type="radio" name="iot_needs" value="No"> No</label>
+  </div>
+  <textarea name="iot_needs_details" placeholder="e.g., Sensorised production line, remote diagnostics"></textarea>
+
+  <!-- Digital Twin Needs -->
+  <label>Digital Twin Needs</label>
+  <div>
+    <label><input type="radio" name="digital_twin" value="Yes"> Yes</label>
+    <label><input type="radio" name="digital_twin" value="No"> No</label>
+  </div>
+  <textarea name="digital_twin_details" placeholder="e.g., Digital twin for cell cooling simulation"></textarea>
+
+  <!-- Cyber-Security Requirements -->
+  <label>Cyber-Security Requirements</label>
+  <div>
+    <label><input type="radio" name="cyber_security" value="Yes"> Yes</label>
+    <label><input type="radio" name="cyber_security" value="No"> No</label>
+  </div>
+  <textarea name="cyber_security_details" placeholder="e.g., ISO 27001 compliance, NCSC Cyber Essentials"></textarea>
+
+  <!-- Data Analytics Needs -->
+  <label>Data Analytics Needs</label>
+  <div>
+    <label><input type="radio" name="data_analytics" value="Yes"> Yes</label>
+    <label><input type="radio" name="data_analytics" value="No"> No</label>
+  </div>
+  <textarea name="data_analytics_details" placeholder="e.g., AWS or Azure dashboards for production KPIs"></textarea>
+
+  <div class="nav">
+    <button type="button" onclick="prevPage()">&laquo; Back</button>
+    <button type="button" onclick="nextPage()">Next &raquo;</button>
+  </div>
+</div>
+<!-- Page 7: Sustainability / ESG Goals -->
+<div class="page">
+  <h2>7. Sustainability / ESG Goals</h2>
+
+  <!-- Carbon Footprint Target -->
+  <label>Carbon Footprint Target (tCO₂e)</label>
+  <input type="number" name="carbon_footprint_target" min="0" step="0.01" placeholder="e.g., 500.0">
+
+  <!-- Renewable Energy Preference -->
+  <label>Renewable Energy Preference</label>
+  <div>
+    <label><input type="radio" name="renewable_preference" value="Yes"> Yes</label>
+    <label><input type="radio" name="renewable_preference" value="No"> No</label>
+  </div>
+  <textarea name="renewable_details" placeholder="e.g., 100% renewable manufacturing by 2026"></textarea>
+
+  <!-- Circular Economy Goals -->
+  <label>Circular Economy Goals</label>
+  <textarea name="circular_economy" placeholder="e.g., Reuse of materials, take-back programs, remanufacturing plans"></textarea>
+
+  <!-- Social Impact Goals -->
+  <label>Social Impact Goals</label>
+  <textarea name="social_impact_goals" placeholder="e.g., Local hiring, inclusive training schemes, youth outreach"></textarea>
+
+  <!-- ESG Certifications Sought -->
+  <label>ESG Certifications Sought</label>
+  <select name="esg_certifications[]" multiple>
+    <option>B Corp</option>
+    <option>EcoVadis</option>
+    <option>ISO 14001</option>
+    <option>CDP</option>
+    <option>SA8000</option>
+    <option>Other</option>
+  </select>
+  <textarea name="esg_certifications_details" placeholder="e.g., EcoVadis Silver target in 2025, ISO 14001 in progress"></textarea>
+
+  <div class="nav">
+    <button type="button" onclick="prevPage()">&laquo; Back</button>
+    <button type="button" onclick="nextPage()">Next &raquo;</button>
+  </div>
+</div>
+<!-- Page 8: Supply-Chain & Logistics Needs -->
+<div class="page">
+  <h2>8. Supply-Chain & Logistics Needs</h2>
+
+  <!-- ERP/MRP Integration -->
+  <label>ERP/MRP Integration</label>
+  <div>
+    <label><input type="radio" name="erp_mrp" value="Yes"> Yes</label>
+    <label><input type="radio" name="erp_mrp" value="No"> No</label>
+  </div>
+  <textarea name="erp_mrp_details" placeholder="e.g., SAP S/4HANA, Oracle Netsuite, Odoo compatibility"></textarea>
+
+  <!-- Lead Time Requirements -->
+  <label>Maximum Acceptable Lead Time (days)</label>
+  <input type="number" name="lead_time_max" min="0" placeholder="e.g., 30">
+
+  <!-- Incoterms Preference -->
+  <label>Preferred Incoterms</label>
+  <select name="incoterms_preference">
+    <option value="">--Select--</option>
+    <option>EXW</option>
+    <option>FCA</option>
+    <option>FOB</option>
+    <option>CIF</option>
+    <option>DAP</option>
+    <option>DDP</option>
+    <option>Other</option>
+  </select>
+
+  <!-- Subtier Supplier Needs -->
+  <label>Subtier Supplier Needs</label>
+  <textarea name="subtier_supplier_needs" placeholder="e.g., REACH-compliant, AS9100 certified supply chain required"></textarea>
+
+  <!-- Inventory Management Needs -->
+  <label>Inventory Management Needs</label>
+  <div>
+    <label><input type="radio" name="inventory_management" value="Yes"> Yes</label>
+    <label><input type="radio" name="inventory_management" value="No"> No</label>
+  </div>
+  <textarea name="inventory_management_details" placeholder="e.g., Kanban bins, consignment stock, JIT delivery"></textarea>
+
+  <div class="nav">
+    <button type="button" onclick="prevPage()">&laquo; Back</button>
+    <button type="button" onclick="nextPage()">Next &raquo;</button>
+  </div>
+</div>
+<!-- Page 9: Collaboration & Support Needs -->
+<div class="page">
+  <h2>9. Collaboration & Support Needs</h2>
+
+  <!-- Funding Needs -->
+  <label>Funding Needs</label>
+  <textarea name="funding_needs" placeholder="e.g., £500k equity for Series A, Innovate UK grant for pilot line"></textarea>
+
+  <!-- Mentorship Needs -->
+  <label>Mentorship Needs</label>
+  <textarea name="mentorship_needs" placeholder="e.g., Scaling manufacturing, export readiness, team leadership"></textarea>
+
+  <!-- University Collaboration -->
+  <label>University Collaboration</label>
+  <div>
+    <label><input type="radio" name="university_collab" value="Yes"> Yes</label>
+    <label><input type="radio" name="university_collab" value="No"> No</label>
+  </div>
+  <textarea name="university_collab_details" placeholder="e.g., Joint PhD, use of facilities, IP co-development"></textarea>
+
+  <!-- Corporate Partnerships -->
+  <label>Corporate Partnerships</label>
+  <div>
+    <label><input type="radio" name="corporate_partnerships" value="Yes"> Yes</label>
+    <label><input type="radio" name="corporate_partnerships" value="No"> No</label>
+  </div>
+  <textarea name="corporate_partnerships_details" placeholder="e.g., Pilot project with JLR, supply agreement with Tier 1"></textarea>
+
+  <!-- Facility Access Needs -->
+  <label>Facility Access Needs</label>
+  <textarea name="facility_access" placeholder="e.g., Access to UK Battery Industrialisation Centre, cleanroom for sensor packaging"></textarea>
+
+  <div class="nav">
+    <button type="button" onclick="prevPage()">&laquo; Back</button>
+    <button type="button" onclick="nextPage()">Next &raquo;</button>
+  </div>
+</div>
+<!-- Page 10: Market & Customer Traction -->
+<div class="page">
+  <h2>10. Market & Customer Traction</h2>
+
+  <!-- Target Markets -->
+  <label class="required">Target Markets</label>
+  <select name="target_markets[]" multiple required>
+    <option>UK</option>
+    <option>EU</option>
+    <option>North America</option>
+    <option>Asia</option>
+    <option>Other</option>
+  </select>
+  <textarea name="target_markets_details" placeholder="e.g., North America (California, Michigan), EU (Germany, France)"></textarea>
+
+  <!-- Key Customers -->
+  <label>Key Customers</label>
+  <textarea name="key_customers" placeholder="e.g., OEMs like Rolls-Royce, Siemens Mobility, or large SMEs"></textarea>
+
+  <!-- Pilot Projects -->
+  <label>Pilot Projects</label>
+  <textarea name="pilot_projects" placeholder="e.g., EV battery pack pilot with OEM X, sensor trials with Tier 1 supplier"></textarea>
+
+  <!-- Revenue to Date -->
+  <label>Revenue to Date (GBP)</label>
+  <input type="number" step="0.01" name="revenue_to_date" min="0" placeholder="e.g., 250000.00">
+
+  <!-- Market Validation -->
+  <label>Market Validation</label>
+  <textarea name="market_validation" placeholder="e.g., Letters of Intent, signed pre-orders, funded trials"></textarea>
+
+  <div class="nav">
+    <button type="button" onclick="prevPage()">&laquo; Back</button>
+    <button type="button" onclick="nextPage()">Next &raquo;</button>
+  </div>
+</div>
+<!-- Page 11: Team Expertise -->
+<div class="page">
+  <h2>11. Team Expertise</h2>
+
+  <!-- Key Team Members -->
+  <label>Key Team Members</label>
+  <textarea name="key_team_members" placeholder="e.g., Jane Doe (CEO), John Smith (CTO), with bios"></textarea>
+
+  <!-- Technical Expertise -->
+  <label>Technical Expertise</label>
+  <textarea name="technical_expertise" placeholder="e.g., Battery engineering, thermal management, embedded AI"></textarea>
+
+  <!-- Industry Experience -->
+  <label>Industry Experience</label>
+  <textarea name="industry_experience" placeholder="e.g., CTO: 10 years in automotive; Head of Ops: 15 years in electronics"></textarea>
+
+  <!-- Advisory Board -->
+  <label>Advisory Board</label>
+  <textarea name="advisory_board" placeholder="e.g., Prof. A from Imperial College, former VP of R&D at Company B"></textarea>
+
+  <div class="nav">
+    <button type="button" onclick="prevPage()">&laquo; Back</button>
+    <button type="button" onclick="nextPage()">Next &raquo;</button>
+  </div>
+</div>
+<!-- Page 12: Notes & Attachments -->
+<div class="page">
+  <h2>12. Notes & Attachments</h2>
+
+  <!-- Additional Notes -->
+  <label>Additional Notes</label>
+  <textarea name="additional_notes" placeholder="e.g., Awards won, press mentions, market recognition, etc."></textarea>
+
+  <!-- Pitch Deck Upload -->
+  <label>Pitch Deck (PDF, max 10MB)</label>
+  <input type="file" name="pitch_deck" accept=".pdf" />
+
+  <!-- Technical Docs Upload -->
+  <label>Technical Documents (PDF, DWG, STEP, max 10MB)</label>
+  <input type="file" name="technical_docs" accept=".pdf,.dwg,.step,.stp" />
+
+  <!-- Certifications Upload -->
+  <label>Certifications (PDF, max 10MB)</label>
+  <input type="file" name="certifications" accept=".pdf" />
+
+  <div class="nav">
+    <button type="button" onclick="prevPage()">&laquo; Back</button>
+    <button type="submit">Submit</button>
+  </div>
+</div>
 
       <!-- Placeholder for future pages (2–12) -->
       <div class="page">
